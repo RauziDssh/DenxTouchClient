@@ -33,7 +33,10 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ShowMember = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem1_SelectRoom = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,9 +50,12 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1_SelectRoom,
+            this.toolStripSeparator1,
+            this.toolStripMenuItem_ShowMember,
             this.toolStripMenuItem_Exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 98);
             // 
             // toolStripMenuItem_Exit
             // 
@@ -58,9 +64,27 @@
             this.toolStripMenuItem_Exit.Text = "終了";
             this.toolStripMenuItem_Exit.Click += new System.EventHandler(this.toolStripMenuItem_Exit_Click);
             // 
+            // toolStripMenuItem_ShowMember
+            // 
+            this.toolStripMenuItem_ShowMember.Name = "toolStripMenuItem_ShowMember";
+            this.toolStripMenuItem_ShowMember.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_ShowMember.Text = "各部屋の確認";
+            this.toolStripMenuItem_ShowMember.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // toolStripMenuItem1_SelectRoom
+            // 
+            this.toolStripMenuItem1_SelectRoom.Name = "toolStripMenuItem1_SelectRoom";
+            this.toolStripMenuItem1_SelectRoom.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1_SelectRoom.Text = "部屋の選択";
             // 
             // Form1
             // 
@@ -80,6 +104,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Exit;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ShowMember;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1_SelectRoom;
     }
 }
 

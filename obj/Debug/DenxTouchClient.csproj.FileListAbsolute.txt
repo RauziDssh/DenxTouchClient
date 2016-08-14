@@ -14,3 +14,19 @@ c:\users\rauzi\documents\visual studio 2015\Projects\DenxTouchClient\bin\Debug\S
 c:\users\rauzi\documents\visual studio 2015\Projects\DenxTouchClient\bin\Debug\Newtonsoft.Json.dll
 c:\users\rauzi\documents\visual studio 2015\Projects\DenxTouchClient\bin\Debug\Newtonsoft.Json.xml
 c:\users\rauzi\documents\visual studio 2015\Projects\DenxTouchClient\obj\Debug\DenxTouchClient.Form1.resources
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\DenxTouchClient.exe.config
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\obj\Debug\DenxTouchClient.exe
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\obj\Debug\DenxTouchClient.pdb
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\obj\Debug\DenxTouchClient.csprojResolveAssemblyReference.cache
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\obj\Debug\DenxTouchClient.Form1.resources
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\obj\Debug\DenxTouchClient.Properties.Resources.resources
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\obj\Debug\DenxTouchClient.csproj.GenerateResource.Cache
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\DenxTouchClient.exe
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\DenxTouchClient.pdb
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\ReactiveProperty.Experimental.NET40.dll
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\System.Reactive.dll
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\ReactiveProperty.Experimental.NET40.xml
+C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\System.Reactive.xml
