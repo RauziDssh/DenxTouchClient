@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem_ShowMember = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1_SelectRoom = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ShowMember = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,18 +51,17 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1_SelectRoom,
-            this.toolStripSeparator1,
             this.toolStripMenuItem_ShowMember,
+            this.toolStripSeparator1,
             this.toolStripMenuItem_Exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(153, 98);
             // 
-            // toolStripMenuItem_Exit
+            // toolStripMenuItem1_SelectRoom
             // 
-            this.toolStripMenuItem_Exit.Name = "toolStripMenuItem_Exit";
-            this.toolStripMenuItem_Exit.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem_Exit.Text = "終了";
-            this.toolStripMenuItem_Exit.Click += new System.EventHandler(this.toolStripMenuItem_Exit_Click);
+            this.toolStripMenuItem1_SelectRoom.Name = "toolStripMenuItem1_SelectRoom";
+            this.toolStripMenuItem1_SelectRoom.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1_SelectRoom.Text = "部屋の選択";
             // 
             // toolStripMenuItem_ShowMember
             // 
@@ -71,20 +70,21 @@
             this.toolStripMenuItem_ShowMember.Text = "各部屋の確認";
             this.toolStripMenuItem_ShowMember.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
-            // toolStripMenuItem1_SelectRoom
+            // toolStripMenuItem_Exit
             // 
-            this.toolStripMenuItem1_SelectRoom.Name = "toolStripMenuItem1_SelectRoom";
-            this.toolStripMenuItem1_SelectRoom.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem1_SelectRoom.Text = "部屋の選択";
+            this.toolStripMenuItem_Exit.Name = "toolStripMenuItem_Exit";
+            this.toolStripMenuItem_Exit.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_Exit.Text = "終了";
+            this.toolStripMenuItem_Exit.Click += new System.EventHandler(this.toolStripMenuItem_Exit_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -93,6 +93,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 

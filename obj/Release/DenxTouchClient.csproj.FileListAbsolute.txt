@@ -1,0 +1,16 @@
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\DenxTouchClient.exe.config
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\DenxTouchClient.exe
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\DenxTouchClient.pdb
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\Newtonsoft.Json.dll
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\ReactiveProperty.Experimental.NET40.dll
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\System.Reactive.dll
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\System.Windows.Interactivity.dll
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\Newtonsoft.Json.xml
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\ReactiveProperty.Experimental.NET40.xml
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Release\System.Reactive.xml
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Release\DenxTouchClient.csprojResolveAssemblyReference.cache
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Release\DenxTouchClient.Form1.resources
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Release\DenxTouchClient.Properties.Resources.resources
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Release\DenxTouchClient.csproj.GenerateResource.Cache
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Release\DenxTouchClient.exe
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Release\DenxTouchClient.pdb

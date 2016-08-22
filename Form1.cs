@@ -12,6 +12,8 @@ using System.Reactive.Subjects;
 using System.Reactive.Linq;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Media;
+using Microsoft.Win32;
 
 namespace DenxTouchClient
 {
@@ -21,21 +23,34 @@ namespace DenxTouchClient
 
         Room room;//設置対象の部屋
 
-        string doshishaPMm = "";//同志社大学の学生証のPMm
+        string doshishaPMm = "0120220427674EFF";//学生証のPMm
+        string serverUrl = @"http://touch.tsuno.co";
+
+        SoundPlayer se_in;
+        SoundPlayer se_out;
 
         public Form1()
         {
+
             InitializeComponent();
 
+            //SEの設定
+            se_in = new SoundPlayer(Properties.Resources.se_in);
+            se_out = new SoundPlayer(Properties.Resources.se_out);
+
+            //タイマーの設定
             timer1.Interval = 500;
             timer1.Enabled = true;
 
+            //利用可能な部屋を登録
             var availavleRoom = new Room[] { Room.box233, Room.box234, Room.box412 };
+            //利用可能な部屋をそれぞれ項目として使用可能にする
             foreach (var element in availavleRoom)
             {
                 var name = element.DisplayName();
                 var tsmi = new ToolStripMenuItem();
                 tsmi.Text = name;
+                //部屋名クリック時の処理
                 tsmi.Click += (s, o) =>
                 {
                     room = element;
@@ -46,21 +61,27 @@ namespace DenxTouchClient
                 toolStripMenuItem1_SelectRoom.DropDownItems.Add(tsmi);
             }
 
+            //部屋の設定の読み込み
             var proom = Properties.Settings.Default.PreserveRoomNum;
             if (proom == -1)
             {
+                //部屋の設定が行われていないとき
                 room = Room.None;
                 toolStripMenuItem1_SelectRoom.Text = $"選択：なし";
+                this.ShowMessage("部屋が設定されていません");
             }
             else
             {
+                //部屋の設定が完了しているとき
                 room = (Room)proom;
                 toolStripMenuItem1_SelectRoom.Text = $"選択：{room.DisplayName()}";
+                this.ShowMessage("学生証をかざしてください", "DENX Touch Client");
             }
 
+            //ICカードで読み込んだIDmが流れてくるストリーム
             felicaInfoStream = new Subject<string>();
             felicaInfoStream
-                .DistinctUntilChanged()
+                .DistinctUntilChanged()//同じものが流れて来たら弾く
                 .Where(v => v != null)
                 .Do(v => Console.WriteLine(v))
                 .Repeat()
@@ -72,21 +93,39 @@ namespace DenxTouchClient
                     }
                 );
 
-            ShowMessage("学生証をかざしてください","DENX Touch Client");
+            SystemEvents.SessionEnding +=
+                new SessionEndingEventHandler(SystemEvents_SessionEnding);
         }
 
+        //ユーザの状態を取得して帰ってきたStatusを処理する
         private async void SendMessage(string CardId)
         {
             var status = await this.GetStatusAsync(CardId);
+            if(status == null) { return; } 
             if(status.room != Room.None)
             {
-                var InOut = status.InOrOut ? "入室" : "退室";
-                ShowMessage($"{InOut}:{status.username}","ICカードが読み込まれました");
+                ShowStatus(status);
             }
             else
             {
                 ShowMessage("登録が必要です", "未登録ユーザ");
                 System.Diagnostics.Process.Start(status.username);
+
+            }
+        }
+
+        //正常にStatusを取得できた場合に行う処理
+        private void ShowStatus(Status status)
+        {
+            var InOut = status.InOrOut ? "入室" : "退室";
+            ShowMessage($"{InOut}:{status.username}", "ICカードが読み込まれました");
+            if (status.InOrOut)
+            {
+                se_in.Play();
+            }
+            else
+            {
+                se_out.Play();
             }
         }
 
@@ -107,21 +146,35 @@ namespace DenxTouchClient
         //APIを叩いて各値をStatusにまとめて返す(falseのときの返し方については要再検討)
         public async Task<Status> GetStatusAsync(string cardId)
         {
-            var client = new System.Net.Http.HttpClient();
-            var roomName = room.DisplayName();
-            var status = await client.GetStringAsync($"http://localhost:3000/touch?cardId={cardId}&place={roomName}");
-            dynamic j = JsonConvert.DeserializeObject(status);
-            if((bool)j.success)
+            try
             {
-                return new Status(
-                    RoomExt.DisplayRoom((string)j.place),
-                    (string)j.inOrOut == "in"?true:false,
-                    (string)j.twitterId);
+                var client = new System.Net.Http.HttpClient();
+                var roomName = room.DisplayName();
+                var status = await client.GetStringAsync($"{serverUrl}/touch?cardId={cardId}&place={roomName}");
+                dynamic j = JsonConvert.DeserializeObject(status);
+                Console.WriteLine(status.ToString());
+                if ((bool)j.success)
+                {
+                    return new Status(
+                        RoomExt.DisplayRoom((string)j.place),
+                        (string)j.inOrOut == "in" ? true : false,
+                        (string)j.username);
+                }
+                else
+                {
+                    var urlStr = (string)j.url;
+                    return new Status(Room.None, false, $"{serverUrl}{urlStr}");//あとでなんとかする
+                }
             }
-            else
+            catch(HttpRequestException e)
             {
-                var urlStr = (string)j.url;
-                return new Status(Room.None,false,$"http://localhost:3000{urlStr}");//あとでなんとかする
+                this.ShowMessage("サーバに繋がりませんでした。管理者に問い合わせてください。");
+                return null;
+            }
+            catch(Exception e)
+            {
+                this.ShowMessage("レスポンスエラー");
+                return null;
             }
         }
 
@@ -140,6 +193,8 @@ namespace DenxTouchClient
             GetCardId();
         }
 
+        //CardIDの取得
+            //IDmが流れて来たらfelicaInfoStreamに流す
         public void GetCardId()
         {
             try
@@ -163,11 +218,17 @@ namespace DenxTouchClient
                         pdataStr += pdata[i].ToString("X2");
                     }
 
-                    Console.WriteLine(pdataStr);
+                    //Console.WriteLine(pdataStr);
 
+                    //pMmが学生証のものかどうかをチェック
                     if (pdataStr == doshishaPMm)
                     {
                         felicaInfoStream.OnNext(dataStr);
+                    }
+                    else
+                    {
+                        this.ShowMessage("このICカードは学生証ではありません");
+                        return;
                     }
                 }
             }
@@ -187,7 +248,35 @@ namespace DenxTouchClient
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://localhost:3000/places");
+            System.Diagnostics.Process.Start($"{serverUrl}/places");
+        }
+
+        private void SystemEvents_SessionEnding(object sender, SessionEndingEventArgs e)
+        {
+            string s = "";
+            if (e.Reason == SessionEndReasons.Logoff)
+            {
+                s = "ログオフしようとしています。";
+            }
+            else if (e.Reason == SessionEndReasons.SystemShutdown)
+            {
+                s = "シャットダウンしようとしています。";
+            }
+            if (MessageBox.Show($"{s}\n\n{room.DisplayName()}にいるメンバーを全員退出状態にしますか？",
+                "終了時アクション", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                //全員退出状態にする
+                
+            }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //イベントを解放する
+            //フォームDisposeメソッド内の基本クラスのDisposeメソッド呼び出しの前に
+            //記述してもよい
+            SystemEvents.SessionEnding -=
+                new SessionEndingEventHandler(SystemEvents_SessionEnding);
         }
     }
 
