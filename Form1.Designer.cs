@@ -37,6 +37,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripMenuItem_info = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,9 +54,10 @@
             this.toolStripMenuItem1_SelectRoom,
             this.toolStripMenuItem_ShowMember,
             this.toolStripSeparator1,
+            this.toolStripMenuItem_info,
             this.toolStripMenuItem_Exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 120);
             // 
             // toolStripMenuItem1_SelectRoom
             // 
@@ -86,6 +88,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // toolStripMenuItem_info
+            // 
+            this.toolStripMenuItem_info.Name = "toolStripMenuItem_info";
+            this.toolStripMenuItem_info.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_info.Text = "Info";
+            this.toolStripMenuItem_info.Click += new System.EventHandler(this.toolStripMenuItem_info_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -108,6 +117,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ShowMember;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1_SelectRoom;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_info;
     }
 }
 

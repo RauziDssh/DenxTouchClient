@@ -30,9 +30,11 @@ C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\System.Windows.Interac
 C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\Newtonsoft.Json.xml
 C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\ReactiveProperty.Experimental.NET40.xml
 C:\Users\rauzi\Documents\GitHub\DenxTouchClient\bin\Debug\System.Reactive.xml
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.csprojResolveAssemblyReference.cache
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.Form1.resources
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.Properties.Resources.resources
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.csproj.GenerateResource.Cache
 C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\DenxTouchClient.exe.config
-C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.exe
-C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.pdb
 C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\DenxTouchClient.exe
 C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\DenxTouchClient.pdb
 C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\Newtonsoft.Json.dll
@@ -42,7 +44,9 @@ C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchCl
 C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\ReactiveProperty.Experimental.NET40.xml
 C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\System.Reactive.xml
-C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.csprojResolveAssemblyReference.cache
-C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.Form1.resources
-C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.Properties.Resources.resources
-C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.csproj.GenerateResource.Cache
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.exe
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.pdb
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\DenxTouchClient.exe.manifest
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\bin\Debug\DenxTouchClient.application
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.exe.manifest
+C:\Users\Rauzi\Documents\Visual Studio 2015\Projects\DenxTouchClient\DenxTouchClient\obj\Debug\DenxTouchClient.application
