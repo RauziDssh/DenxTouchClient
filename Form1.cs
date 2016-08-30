@@ -97,7 +97,7 @@ namespace DenxTouchClient
 
         private RoomManager InitializeRoom(Room r)
         {
-            roomManager = new RoomManager(r);
+            roomManager = new RoomManager(r,this);
             roomManager.statusStream
                 .DistinctUntilChanged()
                 .Subscribe(v =>

@@ -11,10 +11,12 @@ namespace DenxTouchClient
     {
         public Room room { get; private set; }
         public Subject<Status> statusStream { get; set; }
+        private Form1 form;
 
-        public RoomManager(Room r)
+        public RoomManager(Room r,Form1 f)
         {
             this.room = r;
+            form = f;
             statusStream = new Subject<Status>();
         }
 
@@ -36,15 +38,13 @@ namespace DenxTouchClient
                 }
                 else
                 {
-                    var f = (Form1)Form1.ActiveForm;
-                    f.ShowErrorMessage("未登録ユーザです。登録が必要です。");
+                    form.ShowErrorMessage("未登録ユーザです。登録が必要です。");
                     System.Diagnostics.Process.Start(status.username);
                 }
             }
             catch (Exception e)
             {
-                var f = (Form1)Form1.ActiveForm;
-                f.ShowErrorMessage(e.ToString());
+                form.ShowErrorMessage(e.Message);
             }
         }
     }

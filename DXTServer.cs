@@ -20,8 +20,8 @@ namespace DenxTouchClient
                 var client = new System.Net.Http.HttpClient();
                 var roomName = room.DisplayName();
                 var status = await client.GetStringAsync($"{serverUrl}/touch?cardId={cardId}&place={roomName}");
+                
                 dynamic j = JsonConvert.DeserializeObject(status);
-                Console.WriteLine(status.ToString());
                 if ((bool)j.success)
                 {
                     return new Status(

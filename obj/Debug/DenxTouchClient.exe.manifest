@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DenxTouchClient.exe" size="1971112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DenxTouchClient.exe" size="1970600">
       <assemblyIdentity name="DenxTouchClient" version="1.0.4.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>d2iUEUJgpy76hxeUg4xmINeD1Jna6VPSyHU6eufok/0=</dsig:DigestValue>
+        <dsig:DigestValue>1CF/L8JDVI6UO1P8pZpcOpMM69ciisf40883wgN9O0w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
