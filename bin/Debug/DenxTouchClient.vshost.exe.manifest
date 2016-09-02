@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="DenxTouchClient.exe" version="1.0.4.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="DenxTouchClient" version="1.0.4.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="DenxTouchClient" version="1.0.6.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="DenxTouchClient.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DenxTouchClient.exe" size="1971112">
-      <assemblyIdentity name="DenxTouchClient" version="1.0.4.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DenxTouchClient.exe" size="1970600">
+      <assemblyIdentity name="DenxTouchClient" version="1.0.6.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>d2iUEUJgpy76hxeUg4xmINeD1Jna6VPSyHU6eufok/0=</dsig:DigestValue>
+        <dsig:DigestValue>fxCYIGQQSOo39DSS8ApsmIL90LSqjafDZJF8R7PQrPU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
